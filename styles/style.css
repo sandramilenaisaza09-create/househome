@@ -1,0 +1,15 @@
+.tituloencabezado{
+    font-size: 30px;
+    color: pink;
+}
+header { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body { 
+  background-image: url("/assets/images/66033e9fad508ac73dffa0930ae32077.jpg");
+  background-size: 10%;
+  background-size: contain;
+background-repeat: no-repeat;
+}
