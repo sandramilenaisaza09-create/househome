@@ -1,71 +1,282 @@
 body {
-  background-color: #f2f2f2; /* gris claro */
+  background-color: #f2f2f2;
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
-}              
+}
+
 .encabezado {
   background-color: #ffe4e1;
   text-align: center;
   padding: 40px 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
 .encabezado h1 {
-  color: #d07b83; 
+  color: #d07b83;
   font-size: 3em;
-  font-style: italic; 
-  font-family: "Playfair Display", "Georgia", serif; 
+  font-style: italic;
+  font-family: "Playfair Display", "Georgia", serif;
   margin: 0;
   letter-spacing: 2px;
 }
-.descripcion {
-  width: 80%;
-  margin: 20px auto;
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+.subtítulo {
+  background: linear-gradient(90deg, #fff8dc, #f5deb3);
+  color: #6b4e00;
+  font-family: "Alex Brush", cursive;
+  font-style: italic;
   text-align: center;
-  font-size: 1.1em;
-  color: #555;
-  line-height: 1.6;
-  font-family: 'Poppins', sans-serif;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 2em;
+  letter-spacing: 1px;
+  margin: 25px auto;
+  width: 80%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
-.imagen-contenedor {
+
+.descripcion {
   width: 80%;
   margin: 30px auto;
   text-align: center;
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.4em;
+  color: #333;
+  background-color: #f2f2f2; 
+  border: 2px solid #f4a6b4; 
+  border-radius: 15px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-.menu {
-  background-color: #e493b3; 
-  transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(228, 147, 179, 0.4);
+
+
+
+.imagen-contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: 28px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.12);
+  background: linear-gradient(180deg, #fff, #fffafc);
 }
-.lineas {
+
+
+.imagen-contenedor img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(.22, .9, .32, 1), filter 0.4s ease;
+  will-change: transform;
+}
+
+
+.imagen-contenedor:hover img {
+  transform: scale(1.04);
+  filter: brightness(1.03);
+}
+
+
+.imagen-contenedor::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  pointer-events: none;
+}
+
+.imagen-contenedor figcaption {
+  position: absolute;
+  left: 20px;
+  bottom: 18px;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.15);
+  padding: 8px 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  max-width: calc(100% - 40px);
+}
+
+
+.imagen-contenedor figcaption {
+  left: 12px;
+  bottom: 12px;
+  padding: 6px 10px;
+  font-size: 0.95rem;
+  }
+
+
+.productos {
   text-align: center;
   margin-top: 40px;
 }
-.lista-lineas {   
- background-color: #e8a0a0;
-  color: #fff;
-  font-weight: bold;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1.1em;
+
+.productos h3 {
+  color: #d07b83;
+  font-size: 2em;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+  font-style: italic;
 }
-.formulario { 
+
+.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu li {
   background-color: #e8a0a0;
   color: #fff;
-  font-weight: bold;
   padding: 12px 25px;
-  border: none;
   border-radius: 25px;
-  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1em;
   transition: all 0.3s ease;
-  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-.footer {
+
+.menu li:hover {
+  background-color: #d07b83;
+  transform: scale(1.05);
+}
+
+.lineas {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.lista-lineas {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.lista-lineas li {
+    background-color: #e8a0a0;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.lista-lineas li a {
+  text-decoration: none;
+  color: white;
+}
+
+.lista-lineas li:hover {
+  background-color: #d07b83;
+  transform: scale(1.05);
+}
+
+.formulario {
+  background-color: transparent; 
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 10px;
+}
+.redes-sociales {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.redes-sociales img {
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.1);
+}  
+.contacto-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.formulario {
+  flex: 1;
+  background-color: transparent;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+}
+
+.redes-sociales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.redes-sociales img {
+  width: 40px;
+  transition: transform 0.3s ease;
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.2);
+}
+ .footer {
+  background: linear-gradient(135deg, #f8dede, #fbeaea); /* suave palo de rosa */
+  color: #6b4040;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+  border-top: 2px solid #e4a3a3;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer h6 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6em;
   margin-bottom: 10px;
-  font-size: 1.1em;
+  letter-spacing: 1px;
+  color: #a85a6c;
+}
+
+.footer p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  margin: 5px 0;
+  line-height: 1.5;
+  color: #4e4e4e;
+}
+
+.footer .copy {
+  margin-top: 15px;
   font-style: italic;
+  font-size: 0.9em;
+  color: #866;
 }
