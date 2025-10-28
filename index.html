@@ -1,87 +1,106 @@
-<!-- Milena -->
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Hogar</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Hogar</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header class="encabezado">
-        <h1 class="encabezado">Casa Hogar</h1>
-    </header>
 
-    <main>
+  <!-- HEADER -->
+ <header class="header">
+  <div class="header-container">
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="/assets/images/logo svg casa hogar.svg" alt="Casa Hogar" />
+      <h1>Casa Hogar</h1>
+    </div>
 
-        <section>
-            <h2 class="subtítulo">Todo en artículos para el hogar</h2>
-            <p class="descripcion">En <strong>Casa Hogar</strong> trabajamos cada día para ofrecerte lo mejor en
-                electrodomésticos.
-                Contamos con productos de excelente calidad, diseños modernos y precios que se ajustan a tu presupuesto.
-                Somos tu mejor opción para equipar y transformar tu hogar con confianza y estilo.</p>
-            <div class="imagen-contenedor">
-                <img src="assets/images/16-electrodomesticos-de-tu-hogar-que-hacen-que-tu-factura-de-electricidad-sea-cara-shutterstock_2473408983.webp"
-                    alt="electrodomesticos" width="1000">
-            </div>
-        </section>
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="nav">
+      <ul>
+        <li><a href="#quienes">Quiénes Somos</a></li>
+        <li><a href="#articulos">Artículos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
 
-        <section>
-            <h3 class="subtítulo">Nuestros productos son</h3>
-            <ul class="menu">
-                <li>Línea de Electrodomesticos</li>
-                <li>Línea de Tecnología</li>
-                <li>Línea de Muebles</li>
-            </ul>
-        </section>
+    <!-- BOTONES -->
+    <div class="buttons">
+      <button class="btn-outline">Iniciar Sesión</button>
+      <button class="btn-solid">Regístrate</button>
+    </div>
+  </div>
+ </header>
 
-        <section class="lineas">
-            <h4 class="subtítulo">Nuestras líneas destacadas son</h4>
-            <ul class="lista-lineas">
-                <li><a href="#">Línea blanca</a></li>
-                <li><a href="#">Pequeños electrodomésticos</a></li>
-                <li><a href="#">Tecnología y celulares</a></li>
-                <li><a href="#">Audio y video</a></li>
-            </ul>
-        </section>
 
-        <section>
-            <h5 class="subtítulo">Contáctame</h5>
-            <form class="formulario">
-                <label>Nombre:</label><br>
-                <input type="text" name="Nombre"><br><br>
-                <label>Mensaje:</label><br>
-                <textarea name="mensaje"></textarea><br><br>
-                <input type="submit" value="enviar">
-        
-            </form>
-            <div class="redes-sociales">
-               <a href="https://www.instagram.com" target="_blank">
-               <img src="assets/icons/instagram_4494489.png" alt="Instagram" width="40">
-               </a>
-               <a href="https://www.facebook.com" target="_blank">
-               <img src="assets/icons/chat_696379.png" alt="Facebook" width="40">
-               </a>
-               <a href="https://wa.me/573004439684" target="_blank">
-               <img src="assets/icons/whatsapp_4494494.png" alt="WhatsApp" width="40">
-               </a>
-            </div>
-        </section>
-   
-    </main>
+  <!-- QUIÉNES SOMOS -->
+  <section id="quienes" class="section">
+    <h2>Quiénes Somos</h2>
+    <p>
+      En Casa Hogar creemos que el verdadero confort comienza en los pequeños detalles. 
+      Somos una empresa dedicada a ofrecerte los mejores artículos 
+      para tu hogar: electrodomésticos, tecnología y soluciones prácticas que hacen tu vida más fácil. 
+      Nos apasiona transformar espacios en lugares llenos de armonía, estilo y funcionalidad. 
+      Porque sabemos que tu hogar no es solo un lugar… es tu historia, tu refugio y el reflejo de quien eres.
+    </p>
+  </section>
 
-    <footer>
-        <div class="footer">
-            <h6>Casa Hogar</h6>
-            <p>La mejor solución para tu hogar. Calidad, confianza y estilo en cada electrodoméstico.</p>
-            <p class="copy">© 2025 Casa Hogar | Todos los derechos reservados</p>
-        </div>
-    </footer>
+  <!-- ARTÍCULOS -->
+  <section id="articulos" class="section">
+    <h2>Artículos</h2>
+    <div class="galeria">
+      <img src="/assets/images/electrodomesticos.webp" alt="Electrodomésticos">
+      <img src="/assets/images/celulares.webp" alt="Celulares">
+      <img src="/assets/images/hogar.webp" alt="Artículos del hogar">
+      <img src="/assets/images/tecnologia.jpg" alt="Tecnología">
+    </div>
+  </section>
 
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contacto">
+    <h2>Contáctame</h2>
+    <form class="formulario">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="ciudad">Ciudad:</label>
+      <input type="text" id="ciudad" name="ciudad" required>
+
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <button type="submit" class="btn-enviar">
+      <span class="icono">✉️</span> Enviar
+</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Casa Hogar | Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const destino = document.querySelector(this.getAttribute('href'));
+        destino.scrollIntoView({ behavior: 'smooth' });
+        nav.classList.remove('active');
+      });
+    });
+  </script>
 
 </body>
-
 </html>
